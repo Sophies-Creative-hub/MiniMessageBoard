@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% messages.forEach(function(message) { %>
+      <div>
+        <p>User: <%= message.user %></p>
+        <p>Message: <%= message.text %></p>
+        <p>Date: <%= message.added.toDateString() %></p>
+      </div>
+    <% }); %>
+    <a href="/new">
+      <button >Create a new comment</button>
+   </a>
+  </body>
+</html>
